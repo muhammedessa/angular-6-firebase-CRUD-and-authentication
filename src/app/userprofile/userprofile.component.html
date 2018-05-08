@@ -1,0 +1,77 @@
+<div class="uk-padding">
+
+<div class="uk-card uk-card-default  ">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="200" height="200" src="{{data.image}}">
+                <br>          <br>
+               
+                <input type="file" (change)="upload($event)" accept=".png,.jpg" />
+              </div>
+            <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">Email : {{email}}</h3>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="uk-card-body">
+        <p> name : {{data.name}}</p>
+        <p>phone :  {{data.phone}}</p>
+        <p>job :  {{data.job}}</p>
+        <p>adress : {{data.adress}}</p>
+        <p>city :  {{data.city}}</p>
+        <p>age :  {{data.age}}</p>
+        
+    </div>
+    <div class="uk-card-footer">
+        <a href="#" class="uk-button uk-button-text" uk-toggle="target: #modal-example" >Edit</a>
+
+       
+ 
+
+        <!-- This is the modal -->
+<div id="modal-example" uk-modal>
+<div class="uk-modal-dialog uk-modal-body">
+
+<fieldset class="uk-fieldset">
+
+    <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="name" name="name"   [(ngModel)]="data.name">
+    </div>
+    <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="age " name="age"  [(ngModel)]="data.age">
+    </div>
+    <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="phone" name="phone"  [(ngModel)]="data.phone">
+    </div>
+    <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="address" name="address"  [(ngModel)]="data.address" >
+    </div>
+    <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="city" name="city"  [(ngModel)]="data.city">
+    </div>
+    <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="job" name="job"  [(ngModel)]="data.job">
+    </div>
+ 
+
+</fieldset>
+
+<p class="uk-text-right">
+    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+    <button class="uk-button uk-button-primary" type="button" (click)="onEdit()" >Save</button>
+</p>
+</div>
+</div>
+
+</div>
+
+
+
+  
+</div>
+</div>
+
+

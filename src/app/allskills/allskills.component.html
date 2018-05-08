@@ -1,0 +1,41 @@
+<div class=" uk-padding"  >
+  
+
+        <table class="uk-table uk-table-striped">
+            <thead>
+                <tr>
+                    <th>$key</th>
+                    <th>name</th>
+                     
+                    <th>skill</th>
+                    <th>province</th>
+                  
+                     
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of itemArray">
+                    
+                    <td>{{item.$key}}</td>
+                    <td>{{item.name}}</td>
+                    
+                    <td>{{item.skill}}</td>
+                    <td>{{item.province}}</td>
+                    <td> <button class="uk-button uk-button-default uk-margin-small-right" type="button"   (click)="moreInfo(item.$key)">Details</button></td>
+     
+             
+                </tr>
+    
+     
+            </tbody>
+        </table>
+        
+    </div>
+     
+    
+    
+    
+    
+    
+    
+     
